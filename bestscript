@@ -1,0 +1,168 @@
+local SevenScript = Instance.new("ScreenGui")
+local Frame = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local TextButton = Instance.new("TextButton")
+local TextButton_Roundify_12px = Instance.new("ImageLabel")
+local CMDHub = Instance.new("ImageLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local Minamize = Instance.new("TextButton")
+local CMDBAR = Instance.new("TextBox")
+ 
+SevenScript.Name = "SevenScript"
+SevenScript.Parent = game.CoreGui
+
+Frame.Name = "Frame"
+Frame.Parent = SevenScript
+Frame.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame.BackgroundTransparency = 1
+Frame.Position = UDim2.new(0.246814281, 0, 0.334969372, 0)
+Frame.Size = UDim2.new(0, 774, 0, 367)
+Frame.Visible = false
+Frame.Image = "rbxassetid://3570695787"
+Frame.ScaleType = Enum.ScaleType.Slice
+Frame.SliceCenter = Rect.new(100, 100, 100, 100)
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.00756493956, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 767, 0, 59)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "      SevenScript       -     🥊Boxing Simulator 2"
+TextLabel.TextColor3 = Color3.new(0, 0, 0)
+TextLabel.TextSize = 50
+TextLabel.TextWrapped = true
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel.TextYAlignment = Enum.TextYAlignment.Top
+
+ScrollingFrame.Parent = Frame
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.new(1, 0.666667, 1)
+ScrollingFrame.BorderColor3 = Color3.new(1, 0.333333, 1)
+ScrollingFrame.Position = UDim2.new(0.015564437, 0, 0.160762936, 0)
+ScrollingFrame.Size = UDim2.new(0, 755, 0, 294)
+
+TextButton.Parent = ScrollingFrame
+TextButton.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton.BackgroundTransparency = 1
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.312582761, 0, 0.017275691, 0)
+TextButton.Size = UDim2.new(0, 261, 0, 50)
+TextButton.ZIndex = 2
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Open Cmds"
+TextButton.TextColor3 = Color3.new(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14
+TextButton.TextWrapped = true
+
+TextButton_Roundify_12px.Name = "TextButton_Roundify_12px"
+TextButton_Roundify_12px.Parent = TextButton
+TextButton_Roundify_12px.Active = true
+TextButton_Roundify_12px.AnchorPoint = Vector2.new(0.5, 0.5)
+TextButton_Roundify_12px.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton_Roundify_12px.BackgroundTransparency = 1
+TextButton_Roundify_12px.Position = UDim2.new(0.487337202, 0, 0.480000615, 0)
+TextButton_Roundify_12px.Selectable = true
+TextButton_Roundify_12px.Size = UDim2.new(0, 261, 0, 50)
+TextButton_Roundify_12px.Image = "rbxassetid://3570695787"
+TextButton_Roundify_12px.ScaleType = Enum.ScaleType.Slice
+TextButton_Roundify_12px.SliceCenter = Rect.new(100, 100, 100, 100)
+
+CMDHub.Name = "CMDHub"
+CMDHub.Parent = SevenScript
+CMDHub.BackgroundColor3 = Color3.new(1, 1, 1)
+CMDHub.BackgroundTransparency = 1
+CMDHub.Position = UDim2.new(0.777035952, 0, 0.653987706, 0)
+CMDHub.Size = UDim2.new(0, 318, 0, 282)
+CMDHub.Visible = false
+CMDHub.Image = "rbxassetid://3570695787"
+CMDHub.ScaleType = Enum.ScaleType.Slice
+CMDHub.SliceCenter = Rect.new(100, 100, 100, 100)
+
+TextLabel_2.Parent = CMDHub
+TextLabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_2.Size = UDim2.new(0, 269, 0, 50)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Cmds"
+TextLabel_2.TextColor3 = Color3.new(0, 0, 0)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14
+TextLabel_2.TextWrapped = true
+
+Minamize.Name = "Minamize"
+Minamize.Parent = CMDHub
+Minamize.BackgroundColor3 = Color3.new(1, 1, 1)
+Minamize.Position = UDim2.new(0.823899388, 0, 0, 0)
+Minamize.Size = UDim2.new(0, 56, 0, 50)
+Minamize.Font = Enum.Font.SourceSans
+Minamize.Text = "X"
+Minamize.TextColor3 = Color3.new(0, 0, 0)
+Minamize.TextScaled = true
+Minamize.TextSize = 14
+Minamize.TextWrapped = true
+
+CMDBAR.Name = "CMDBAR"
+CMDBAR.Parent = CMDHub
+CMDBAR.BackgroundColor3 = Color3.new(1, 0.666667, 1)
+CMDBAR.Position = UDim2.new(0.141509429, 0, 0.411347508, 0)
+CMDBAR.Size = UDim2.new(0, 224, 0, 72)
+CMDBAR.Font = Enum.Font.SourceSans
+CMDBAR.Text = ""
+CMDBAR.TextColor3 = Color3.new(0, 0, 0)
+CMDBAR.TextScaled = true
+CMDBAR.TextSize = 14
+CMDBAR.TextWrapped = true
+
+
+local nameBox = nil
+local nbSelection = nil
+addcmd('hovername',{},function(args, speaker)
+	execCmd('unhovername')
+	wait()
+	CMDBAR = Instance.new("TextLabel")
+	CMDBAR.Name = randomString()
+	CMDBAR.Parent = PARENT
+	CMDBAR.BackgroundTransparency = 1
+	CMDBAR.Size = UDim2.new(0,200,0,30)
+	CMDBAR.Font = Enum.Font.Code
+	CMDBAR.TextSize = 16
+	CMDBAR.Text = ""
+	CMDBAR.TextColor3 = Color3.new(1, 1, 1)
+	CMDBAR.TextStrokeTransparency = 0
+	CMDBAR.TextXAlignment = Enum.TextXAlignment.Left
+	CMDBAR.ZIndex = 10
+	local function updateNameBox()
+		local t
+		local target = IYMouse.Target
+
+		if target then
+			local humanoid = target.Parent:FindFirstChild('Humanoid') or target.Parent.Parent:FindFirstChild('Humanoid')
+			if humanoid then
+				t = humanoid.Parent
+			end
+		end
+
+		if t ~= nil then
+			local x = IYMouse.X
+			local y = IYMouse.Y
+			local xP
+			local yP
+			if IYMouse.X > 200 then
+				xP = x - 205
+				nameBox.TextXAlignment = Enum.TextXAlignment.Right
+			else
+				xP = x + 25
+				nameBox.TextXAlignment = Enum.TextXAlignment.Left
+			end
+			CMDBAR.Position = UDim2.new(0, xP, 0, y)
+			CMDBAR.Text = t.Name
+			nameBox.Visible = true
+		else
+			CMDBAR.Visible = false
+		end
+	end
+	nbUpdateFunc = IYMouse.Move:Connect(updateNameBox)
+end)
